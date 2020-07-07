@@ -2,6 +2,8 @@
 Tools for creating and manipulating wavefunctions
 """
 
+import numpy as np
+
 def shape(wave, freq, phase, amp, *args, **kargs):
     """
     Sets a wave's frequency, phase, and amplitude
@@ -15,5 +17,5 @@ def shape(wave, freq, phase, amp, *args, **kargs):
     Returns:
         The wave function with the set freqency, phase, and amplitude
     """
-    return lambda t: amp * wave(2*pi*(freq*t + phase), *args, **kargs)
+    return lambda t: amp * wave(2*np.pi*(freq*t + phase), *args, **kargs)
 

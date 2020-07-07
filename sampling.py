@@ -6,7 +6,7 @@ import numpy as np
 
 from blipwave import RATE
 
-def sample(wave, length, rate=RATE)
+def sample(wave, length, rate=RATE):
     """
     Samples a waveform
 
@@ -18,6 +18,6 @@ def sample(wave, length, rate=RATE)
     returns:
         An array of samples of the waveform
     """
-    clip = np.linspace(0, length, length*rate)
+    clip = np.linspace(0, length, int(length*rate))
     return wave(clip)
     
