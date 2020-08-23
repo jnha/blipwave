@@ -20,4 +20,4 @@ def sample(wave, length, rate=RATE):
     """
     clip = np.linspace(0, length, int(length*rate))
     return wave(clip)
-    
+

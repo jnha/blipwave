@@ -58,3 +58,12 @@ def clip(sound, length):
         return sound[:length]
     return np.concatenate([sound, np.zeros(length - len(sound))])
 
+def chord(synth, notes, length):
+    try:
+        return sum(synth(note, length) for note in notes)
+    except TypeError:
+        return synth(notes, length)
+
+def chords(synth, notes, amp, lengths):
+    return [chord(synth, n, l)*amp for n, l in zip(notes, lengths)]
+
