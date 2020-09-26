@@ -5,7 +5,7 @@ Oscilators
 import numpy as np
 from blipwave import RATE
 
-def vco(frequencies, waveform, rate=48000):
+def vco(waveform, frequencies, rate=48000):
     """
     Simulates a voltage controlled oscillator
 

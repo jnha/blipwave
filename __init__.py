@@ -5,4 +5,3 @@ from blipwave.sampling import sample
 from blipwave.wavefunction import shape
 from blipwave.envalope import adsr
 from blipwave.sequencing import sequence, clip
-from blipwave.write_wave import write16bit
